@@ -1,6 +1,5 @@
 # Bookstore Sales and Customer Analytics using SQL
 
-## Overview
 This project demonstrates end-to-end data analysis for a bookstore using SQL and CSV data. It covers data import, database design, business-focused SQL queries, and clear visual and written insights. The project is ideal for showcasing practical analytics skills for job applications or portfolio work.
 
 ## Data Sources
@@ -58,7 +57,7 @@ For each query, you will find the SQL and a corresponding image visualizing the 
 SELECT * FROM All_Books_Fiction;
 ```
 **Image:**  
-![All_Books_Fiction](images/1_All_Books_Fiction.png)
+![All_Books_Fiction](1_All_Books_Fiction.png)
 
 ---
 
@@ -68,7 +67,7 @@ SELECT * FROM All_Books_Fiction;
 SELECT * FROM After_1950;
 ```
 **Image:**  
-![After_1950](images/2_After_1950.png)
+![After_1950](2_After_1950.png)
 
 ---
 
@@ -78,7 +77,7 @@ SELECT * FROM After_1950;
 SELECT * FROM All_Customers_Canada;
 ```
 **Image:**  
-![All_Customers_Canada](images/3_All_Customers_Canada.png)
+![All_Customers_Canada](3_All_Customers_Canada.png)
 
 ---
 
@@ -88,7 +87,7 @@ SELECT * FROM All_Customers_Canada;
 SELECT * FROM Orders_Placed_Nov_2023;
 ```
 **Image:**  
-![Orders_Placed_Nov_2023](images/4_Orders_Placed_Nov_2023.png)
+![Orders_Placed_Nov_2023](4_Orders_Placed_Nov_2023.png)
 
 ---
 
@@ -98,7 +97,7 @@ SELECT * FROM Orders_Placed_Nov_2023;
 SELECT * FROM Total_Stock;
 ```
 **Image:**  
-![Total_Stock](images/5_Total_Stock.png)
+![Total_Stock](5_Total_Stock.png)
 
 ---
 
@@ -108,7 +107,7 @@ SELECT * FROM Total_Stock;
 SELECT * FROM Most_Expensive_Book;
 ```
 **Image:**  
-![Most_Expensive_Book](images/6_Most_Expensive_Book.png)
+![Most_Expensive_Book](6_Most_Expensive_Book.png)
 
 ---
 
@@ -118,7 +117,7 @@ SELECT * FROM Most_Expensive_Book;
 SELECT * FROM Ordered_More_Than_1;
 ```
 **Image:**  
-![Ordered_More_Than_1](images/7_Ordered_More_Than_1.png)
+![Ordered_More_Than_1](7_Ordered_More_Than_1.png)
 
 ---
 
@@ -128,7 +127,7 @@ SELECT * FROM Ordered_More_Than_1;
 SELECT * FROM Amount_Exceeds_20;
 ```
 **Image:**  
-![Amount_Exceeds_20](images/8_Amount_Exceeds_20.png)
+![Amount_Exceeds_20](8_Amount_Exceeds_20.png)
 
 ---
 
@@ -138,7 +137,7 @@ SELECT * FROM Amount_Exceeds_20;
 SELECT * FROM Genres_Available;
 ```
 **Image:**  
-![Genres_Available](images/9_Genres_Available.png)
+![Genres_Available](9_Genres_Available.png)
 
 ---
 
@@ -148,7 +147,7 @@ SELECT * FROM Genres_Available;
 SELECT * FROM Lowest_Stock;
 ```
 **Image:**  
-![Lowest_Stock](images/10_Lowest_Stock.png)
+![Lowest_Stock](10_Lowest_Stock.png)
 
 ---
 
@@ -158,7 +157,7 @@ SELECT * FROM Lowest_Stock;
 SELECT * FROM Total_Revenue;
 ```
 **Image:**  
-![Total_Revenue](images/11_Total_Revenue.png)
+![Total_Revenue](11_Total_Revenue.png)
 
 ---
 
@@ -168,7 +167,7 @@ SELECT * FROM Total_Revenue;
 SELECT * FROM Total_Books_Sold_Each_Genre;
 ```
 **Image:**  
-![Total_Books_Sold_Each_Genre](images/12_Total_Books_Sold_Each_Genre.png)
+![Total_Books_Sold_Each_Genre](12_Total_Books_Sold_Each_Genre.png)
 
 ---
 
@@ -178,7 +177,7 @@ SELECT * FROM Total_Books_Sold_Each_Genre;
 SELECT * FROM Average_Price_Fantasy;
 ```
 **Image:**  
-![Average_Price_Fantasy](images/13_Average_Price_Fantasy.png)
+![Average_Price_Fantasy](13_Average_Price_Fantasy.png)
 
 ---
 
@@ -188,7 +187,7 @@ SELECT * FROM Average_Price_Fantasy;
 SELECT * FROM At_Least_2_Orders;
 ```
 **Image:**  
-![At_Least_2_Orders](images/14_At_Least_2_Orders.png)
+![At_Least_2_Orders](14_At_Least_2_Orders.png)
 
 ---
 
@@ -198,7 +197,7 @@ SELECT * FROM At_Least_2_Orders;
 SELECT * FROM Frequently_Ordered_Book;
 ```
 **Image:**  
-![Frequently_Ordered_Book](images/15_Frequently_Ordered_Book.png)
+![Frequently_Ordered_Book](15_Frequently_Ordered_Book.png)
 
 ---
 
@@ -208,7 +207,7 @@ SELECT * FROM Frequently_Ordered_Book;
 SELECT * FROM Top_3_Most_Expensive_Books;
 ```
 **Image:**  
-![Top_3_Most_Expensive_Books](images/16_Top_3_Most_Expensive_Books.png)
+![Top_3_Most_Expensive_Books](16_Top_3_Most_Expensive_Books.png)
 
 ---
 
@@ -218,7 +217,7 @@ SELECT * FROM Top_3_Most_Expensive_Books;
 SELECT * FROM Total_Quantity_Sold_By_Author;
 ```
 **Image:**  
-![Total_Quantity_Sold_By_Author](images/17_Total_Quantity_Sold_By_Author.png)
+![Total_Quantity_Sold_By_Author](17_Total_Quantity_Sold_By_Author.png)
 
 ---
 
@@ -228,7 +227,7 @@ SELECT * FROM Total_Quantity_Sold_By_Author;
 SELECT * FROM Customers_Spent_Over_30;
 ```
 **Image:**  
-![Customers_Spent_Over_30](images/18_Customers_Spent_Over_30.png)
+![Customers_Spent_Over_30](18_Customers_Spent_Over_30.png)
 
 ---
 
@@ -238,7 +237,7 @@ SELECT * FROM Customers_Spent_Over_30;
 SELECT * FROM Customer_Spent;
 ```
 **Image:**  
-![Customer_Spent](images/19_Customer_Spent.png)
+![Customer_Spent](19_Customer_Spent.png)
 
 ---
 
@@ -248,7 +247,7 @@ SELECT * FROM Customer_Spent;
 SELECT * FROM Remaining_Quantity;
 ```
 **Image:**  
-![Remaining_Quantity](images/20_Remaining_Quantity.png)
+![Remaining_Quantity](20_Remaining_Quantity.png)
 
 ---
 
