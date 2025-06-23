@@ -2,7 +2,7 @@
     SELECT * FROM  Customers;
     SELECT * FROM  Orders;
 																 
-																 --Basic Qureies--
+			                                             --Basic Qureies--
 																	
  -- 1) Retrieve all books in the "Fiction" genre
 
@@ -97,7 +97,7 @@
  -- 12) Retrieve the total number of books sold for each genre
  
      CREATE VIEW Total_Books_Sold_Each_Genre AS
-	 SELECT b.genre, SUM(o.quantity) AS Total_Books_Sold 
+     SELECT b.genre, SUM(o.quantity) AS Total_Books_Sold 
      FROM Orders o
      JOIN Books b ON o.book_id = b.book_id
      GROUP BY b.genre;
@@ -106,76 +106,76 @@
  
  -- 13) Calculates the average total amount for orders of books categorized as 'Fantasy'.
  
-    CREATE VIEW Average_Price_Fantasy AS
-	 SELECT b.genre, ROUND (AVG(o.total_amount),2) AS Average_Price_Fantasy FROM Orders o 
-	 JOIN Books b ON o.book_id = b.book_id
-	 WHERE b.genre = 'Fantasy'
-	 GROUP BY b.genre;
+     CREATE VIEW Average_Price_Fantasy AS
+     SELECT b.genre, ROUND (AVG(o.total_amount),2) AS Average_Price_Fantasy FROM Orders o 
+     JOIN Books b ON o.book_id = b.book_id
+     WHERE b.genre = 'Fantasy'
+     GROUP BY b.genre;
 	 
     /*Ans*/ SELECT * FROM Average_Price_Fantasy;
  
  -- 14) List customers who have placed at least 2 orders
 
-	 CREATE VIEW At_Least_2_Orders AS
-	 SELECT c.customer_id, c.customer_name, COUNT(o.order_id) AS Total_Orders FROM Customers c 
-	 JOIN Orders o ON c.customer_id = o.customer_id
-	 GROUP BY c.customer_name, c.customer_id
-	 HAVING COUNT(o.order_id) >= 2;
+     CREATE VIEW At_Least_2_Orders AS
+     SELECT c.customer_id, c.customer_name, COUNT(o.order_id) AS Total_Orders FROM Customers c 
+     JOIN Orders o ON c.customer_id = o.customer_id
+     GROUP BY c.customer_name, c.customer_id
+     HAVING COUNT(o.order_id) >= 2;
 
 
     /*Ans*/ SELECT * FROM At_Least_2_Orders;
  
  -- 15) Find the title of the most frequently ordered book?
 
-	 CREATE VIEW Frequently_Ordered_Book AS
-	 SELECT b.title, COUNT(o.order_id) AS Frequently_Ordered_Book FROM Orders o
-	 JOIN Books b ON o.book_id = b.book_id
-	 GROUP BY b.title
-	 ORDER BY Frequently_Ordered_Book DESC LIMIT 1;
+     CREATE VIEW Frequently_Ordered_Book AS
+     SELECT b.title, COUNT(o.order_id) AS Frequently_Ordered_Book FROM Orders o
+     JOIN Books b ON o.book_id = b.book_id
+     GROUP BY b.title
+     ORDER BY Frequently_Ordered_Book DESC LIMIT 1;
 
     /*Ans*/ SELECT * FROM Frequently_Ordered_Book;
  
  -- 16) Show the top 3 most expensive books of 'Fantasy' Genre
  
-    CREATE VIEW Top_3_Most_Expensive_Books AS
-	 SELECT * FROM Books
-	 WHERE genre = 'Fantasy'
-	 ORDER BY genre DESC LIMIT 3;
+     CREATE VIEW Top_3_Most_Expensive_Books AS
+     SELECT * FROM Books
+     WHERE genre = 'Fantasy'
+     ORDER BY genre DESC LIMIT 3;
 
     /*Ans*/ SELECT * FROM Top_3_Most_Expensive_Books;
  
  -- 17) Retrieve the total quantity of books sold by each author
  
-    CREATE VIEW Total_Quantity_Sold_By_Author AS
-	 SELECT b.author, SUM(o.quantity) AS Total_Quantity_Sold_By_Author FROM Orders o
-	 JOIN Books b ON o.book_id = b.book_id
-	 GROUP BY b.author;
+     CREATE VIEW Total_Quantity_Sold_By_Author AS
+     SELECT b.author, SUM(o.quantity) AS Total_Quantity_Sold_By_Author FROM Orders o
+     JOIN Books b ON o.book_id = b.book_id
+     GROUP BY b.author;
 	 
     /*Ans*/ SELECT * FROM Total_Quantity_Sold_By_Author;
  
  -- 18) List the cities where customers who spent over $30 are located
  
-    CREATE VIEW Customers_Spent_Over_30 AS
-	 SELECT c.city,  o.total_amount AS Customers_Spent_Over_30 FROM Customers c
-	 JOIN Orders o ON c.customer_id = o.customer_id
-	 WHERE o.total_amount > 30;
+     CREATE VIEW Customers_Spent_Over_30 AS
+     SELECT c.city,  o.total_amount AS Customers_Spent_Over_30 FROM Customers c
+     JOIN Orders o ON c.customer_id = o.customer_id
+     WHERE o.total_amount > 30;
 	 
     /*Ans*/ SELECT * FROM Customers_Spent_Over_30;
  
  -- 19) Find the customer who spent the most on orders
  
-    CREATE VIEW Customer_Spent AS
-	 SELECT  c.customer_id, c.customer_name , SUM(o.total_amount) AS Customer_Spent FROM Customers c
-	 JOIN Orders o ON c.customer_id = o.customer_id
-	 GROUP BY c.customer_id, c.customer_name
-	 ORDER BY Customer_Spent DESC LIMIT 1;
+     CREATE VIEW Customer_Spent AS
+     SELECT  c.customer_id, c.customer_name , SUM(o.total_amount) AS Customer_Spent FROM Customers c
+     JOIN Orders o ON c.customer_id = o.customer_id
+     GROUP BY c.customer_id, c.customer_name
+     ORDER BY Customer_Spent DESC LIMIT 1;
 
     /*Ans*/ SELECT * FROM Customer_Spent;
  
  -- 20) Calculate the stock remaining after fulfilling all orders
  
      CREATE VIEW Remaining_Quantity AS
-	  SELECT b.book_id, b.title, b.stock, COALESCE(SUM(o.quantity), 0) AS Order_quantity,
+     SELECT b.book_id, b.title, b.stock, COALESCE(SUM(o.quantity), 0) AS Order_quantity,
      b.stock - COALESCE(SUM(o.quantity), 0) AS Remaining_Quantity
      FROM books b
      LEFT JOIN orders o ON b.book_id = o.book_id
